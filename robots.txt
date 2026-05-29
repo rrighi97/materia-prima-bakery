@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rrighi97.github.io/materia-prima-bakery/sitemap.xml

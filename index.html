@@ -5,10 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Materia Prima — Panetteria artigianale · Rovereto sulla Secchia</title>
 <meta name="description" content="Panetteria artigianale a Rovereto sulla Secchia. Pane a lievito madre, grani antichi, croissant e lievitati fatti a mano ogni giorno da Roberto.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Materia Prima Bakery">
+<meta name="geo.region" content="IT-MO">
+<meta name="geo.placename" content="Rovereto sulla Secchia">
 <meta name="theme-color" content="#2A1C12">
+<link rel="canonical" href="https://rrighi97.github.io/materia-prima-bakery/">
+<link rel="icon" type="image/webp" href="logo-site/logo.webp">
+<link rel="apple-touch-icon" href="logo-site/logo.webp">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Materia Prima Bakery">
+<meta property="og:title" content="Materia Prima — Panetteria artigianale a Rovereto sulla Secchia">
+<meta property="og:description" content="Pane a lievito madre, grani antichi, croissant e lievitati fatti a mano ogni giorno da Roberto.">
+<meta property="og:url" content="https://rrighi97.github.io/materia-prima-bakery/">
+<meta property="og:image" content="https://rrighi97.github.io/materia-prima-bakery/image-site-webp/Bread%201.webp">
+<meta property="og:image:alt" content="Pane artigianale a lievito madre di Materia Prima Bakery">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Materia Prima — Panetteria artigianale">
+<meta name="twitter:description" content="Pane a lievito madre, grani antichi, croissant e lievitati a Rovereto sulla Secchia.">
+<meta name="twitter:image" content="https://rrighi97.github.io/materia-prima-bakery/image-site-webp/Bread%201.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cookie-consent.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rrighi97.github.io/materia-prima-bakery/#website",
+      "name": "Materia Prima Bakery",
+      "url": "https://rrighi97.github.io/materia-prima-bakery/",
+      "inLanguage": "it-IT"
+    },
+    {
+      "@type": "Bakery",
+      "@id": "https://rrighi97.github.io/materia-prima-bakery/#bakery",
+      "name": "Materia Prima Bakery",
+      "url": "https://rrighi97.github.io/materia-prima-bakery/",
+      "image": [
+        "https://rrighi97.github.io/materia-prima-bakery/image-site-webp/Bread%201.webp",
+        "https://rrighi97.github.io/materia-prima-bakery/image-site-webp/Parete%20negozio.webp",
+        "https://rrighi97.github.io/materia-prima-bakery/logo-site/logo.webp"
+      ],
+      "logo": "https://rrighi97.github.io/materia-prima-bakery/logo-site/logo.webp",
+      "description": "Panetteria artigianale a Rovereto sulla Secchia con pane a lievito madre, grani antichi, croissant e lievitati fatti a mano.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via IV Novembre, 43/A",
+        "addressLocality": "Rovereto sulla Secchia",
+        "addressRegion": "MO",
+        "postalCode": "41016",
+        "addressCountry": "IT"
+      },
+      "priceRange": "€",
+      "servesCuisine": "Pane artigianale, lievitati, prodotti da forno",
+      "sameAs": [
+        "https://www.instagram.com/materia.prima.bakery/"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:45",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Wednesday"],
+          "opens": "16:30",
+          "closes": "19:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "07:00",
+          "closes": "13:00"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
 /* ============================================================
    MATERIA PRIMA — Brand System
@@ -134,7 +217,12 @@ p { text-wrap: pretty; }
   transition: color .2s var(--ease);
 }
 .nav-links a:hover { color: var(--ink); }
-.nav-links .btn { padding: .6em 1.2em; font-size: .82rem; }
+.nav-links .btn {
+  padding: .6em 1.2em; font-size: .82rem;
+  color: var(--paper); font-weight: 700;
+}
+.nav-links .btn:hover { color: var(--paper); }
+.nav-links .btn svg { width: 17px; height: 17px; flex: 0 0 auto; }
 .nav-toggle {
   display: none; background: none; border: 0; cursor: pointer; padding: 8px;
   position: relative; z-index: 62;
@@ -375,6 +463,19 @@ p { text-wrap: pretty; }
   min-height: 240px; flex: 1;
 }
 .map-wrap iframe { width: 100%; height: 100%; min-height: 260px; border: 0; display: block; filter: saturate(.78) sepia(.12); }
+.map-wrap iframe:not([src]) { display: none; }
+.map-placeholder {
+  min-height: 260px;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  gap: 14px; padding: clamp(24px,3vw,36px);
+  background: var(--paper-card); color: var(--ink-2);
+}
+.map-placeholder h3 {
+  font-family: var(--display); text-transform: uppercase;
+  letter-spacing: .08em; font-weight: 500; font-size: 1.35rem; margin: 0; color: var(--ink);
+}
+.map-placeholder p { margin: 0; max-width: 42ch; }
+.map-placeholder .btn { padding: .72em 1.25em; font-size: .86rem; }
 
 @media (max-width: 860px) { .visit-inner { grid-template-columns: 1fr; } }
 
@@ -428,7 +529,10 @@ p { text-wrap: pretty; }
     <a href="#pane-antico">Pane antico</a>
     <a href="#chi-siamo">Chi siamo</a>
     <a href="#dove">Dove siamo</a>
-    <a class="btn" href="https://www.instagram.com/materia.prima.bakery/" target="_blank" rel="noopener noreferrer">Seguici</a>
+    <a class="btn" href="https://www.instagram.com/materia.prima.bakery/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Seguici
+    </a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
@@ -441,7 +545,7 @@ p { text-wrap: pretty; }
   <div class="wrap hero-inner">
     <div class="hero-copy reveal">
       <span class="eyebrow">Panetteria artigianale · dal 2023</span>
-      <h1>Il pane di una volta<span class="it">ogni mattina</span></h1>
+      <h1>Il pane di una volta <span class="it">ogni mattina</span></h1>
       <p class="lede">Una piccola bottega a Rovereto sulla Secchia. Farine scelte, lievito madre e lunghe lievitazioni: solo materia prima vera, lavorata a mano.</p>
       <div class="hero-cta">
         <a class="btn" href="#prodotti">I nostri prodotti</a>
@@ -601,9 +705,15 @@ p { text-wrap: pretty; }
           <iframe
             loading="lazy"
             title="Mappa Materia Prima Bakery"
-            src="https://maps.google.com/maps?q=Via%20IV%20Novembre%2043%2FA%20Rovereto%20sulla%20Secchia%20MO&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            data-cookie-category="functional"
+            data-cookie-src="https://maps.google.com/maps?q=Via%20IV%20Novembre%2043%2FA%20Rovereto%20sulla%20Secchia%20MO&t=&z=15&ie=UTF8&iwloc=&output=embed"
             allowfullscreen>
           </iframe>
+          <div class="map-placeholder" data-cookie-placeholder="functional">
+            <h3>Mappa disattivata</h3>
+            <p>Per visualizzare la mappa di Google Maps devi abilitare i cookie funzionali e i contenuti di terze parti.</p>
+            <button class="btn" type="button" data-cookie-accept="functional">Abilita mappa</button>
+          </div>
         </div>
       </div>
     </div>
@@ -636,11 +746,16 @@ p { text-wrap: pretty; }
     </div>
     <div class="foot-bottom">
       <span>© 2026 Materia Prima · Panetteria artigianale</span>
-      <span>Rovereto sulla Secchia (MO)</span>
+      <span>
+        <a href="privacy-policy.html">Privacy Policy</a> ·
+        <a href="cookie-policy.html">Cookie Policy</a> ·
+        <button type="button" class="foot-link" data-cookie-open-preferences>Preferenze cookie</button>
+      </span>
     </div>
   </div>
 </footer>
 
+<script src="cookie-consent.js" defer></script>
 <script>
   // nav scroll state
   const nav = document.getElementById('nav');

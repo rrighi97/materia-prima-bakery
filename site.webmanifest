@@ -1,0 +1,19 @@
+{
+  "name": "Materia Prima Bakery",
+  "short_name": "Materia Prima",
+  "description": "Panetteria artigianale a Rovereto sulla Secchia.",
+  "lang": "it-IT",
+  "start_url": "/materia-prima-bakery/",
+  "scope": "/materia-prima-bakery/",
+  "display": "standalone",
+  "background_color": "#F2E6D7",
+  "theme_color": "#2A1C12",
+  "icons": [
+    {
+      "src": "logo-site/logo.webp",
+      "sizes": "850x850",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}
