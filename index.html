@@ -283,7 +283,7 @@ p { text-wrap: pretty; }
 .feature { background: var(--espresso); color: var(--ink-on-dark); }
 .feat-inner {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: clamp(30px,5vw,72px); align-items: center;
+  gap: clamp(30px,5vw,72px); align-items: start;
 }
 .feat-media { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .feat-media img {
@@ -297,7 +297,7 @@ p { text-wrap: pretty; }
   letter-spacing: .02em; font-size: clamp(2rem,4.4vw,3.2rem);
   line-height: 1.02; margin: 1rem 0 0; color: var(--ink-on-dark);
 }
-.feature p { color: var(--ink-on-dark-2); font-size: 1.1rem; margin: 1.4rem 0 0; max-width: 42ch; }
+.feature p { color: var(--ink-on-dark-2); font-size: 1.1rem; margin: 1.4rem 0 0; }
 .feat-list { list-style: none; padding: 0; margin: 1.8rem 0 0; display: grid; gap: 12px; }
 .feat-list li { display: flex; gap: 12px; align-items: baseline; color: var(--ink-on-dark-2); }
 .feat-list li b { color: var(--gold-soft); font-family: var(--display); font-weight: 500; letter-spacing: .05em; }
@@ -309,11 +309,15 @@ p { text-wrap: pretty; }
 
 /* ============ CHI SIAMO ============ */
 .about-inner {
-  display: grid; grid-template-columns: .9fr 1.1fr;
-  gap: clamp(30px,5vw,70px); align-items: center;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(30px,5vw,70px); align-items: start;
 }
 .about-media { position: relative; }
-.about-media img { width: 100%; border-radius: var(--r-xl); box-shadow: var(--shadow-md); }
+.about-media img {
+  display: block;
+  width: auto; max-width: 100%; height: auto;
+  border-radius: var(--r-xl); box-shadow: var(--shadow-md);
+}
 .about-media .quote-mark {
   position: absolute; top: -30px; right: -10px;
   font-family: var(--display); font-size: 8rem;
@@ -569,7 +573,7 @@ p { text-wrap: pretty; }
   <div class="wrap about-inner">
     <div class="about-media reveal">
       <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-      <img src="image-site-webp/Roberto.webp" alt="Roberto, il fornaio di Materia Prima" width="600" height="750" loading="lazy">
+      <img src="image-site-webp/Roberto.webp" alt="Roberto, il fornaio di Materia Prima" loading="lazy" style="width:100%;height:auto;">
     </div>
     <div class="reveal">
       <span class="eyebrow">Chi siamo</span>
