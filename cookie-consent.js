@@ -29,7 +29,6 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(consent));
     applyConsent(consent);
     hideBanner();
-    showTrigger();
   };
 
   const applyConsent = (consent) => {
@@ -65,7 +64,6 @@
           <button class="cookie-btn primary" type="button" data-cookie-accept-all>Accetta tutto</button>
         </div>
       </section>
-      <button class="cookie-preferences-trigger" type="button" data-cookie-open-preferences aria-label="Modifica preferenze cookie">Cookie</button>
       <section class="cookie-modal" data-cookie-modal aria-hidden="true" aria-label="Centro preferenze cookie">
         <div class="cookie-modal-panel" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
           <div class="cookie-modal-head">
@@ -132,11 +130,9 @@
 
   const banner = () => document.querySelector('[data-cookie-banner]');
   const modal = () => document.querySelector('[data-cookie-modal]');
-  const trigger = () => document.querySelector('.cookie-preferences-trigger');
 
   const showBanner = () => banner()?.classList.add('is-visible');
   const hideBanner = () => banner()?.classList.remove('is-visible');
-  const showTrigger = () => trigger()?.classList.add('is-visible');
 
   const openModal = () => {
     const consent = readConsent() || defaultConsent;
@@ -198,7 +194,6 @@
     const consent = readConsent();
     if (consent) {
       applyConsent(consent);
-      showTrigger();
     } else {
       applyConsent(defaultConsent);
       showBanner();
